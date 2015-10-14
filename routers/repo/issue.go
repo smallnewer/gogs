@@ -248,6 +248,7 @@ func RetrieveRepoMetas(ctx *middleware.Context, repo *models.Repository) []*mode
 		return nil
 	}
 	ctx.Data["Labels"] = labels
+	log.Trace("test2")
 
 	RetrieveRepoMilestonesAndAssignees(ctx, repo)
 	if ctx.Written() {
@@ -261,6 +262,8 @@ func NewIssue(ctx *middleware.Context) {
 	ctx.Data["Title"] = ctx.Tr("repo.issues.new")
 	ctx.Data["PageIsIssueList"] = true
 	renderAttachmentSettings(ctx)
+
+	log.Trace("test1")
 
 	RetrieveRepoMetas(ctx, ctx.Repo.Repository)
 	if ctx.Written() {
