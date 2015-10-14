@@ -206,6 +206,8 @@ func Issues(ctx *middleware.Context) {
 		ctx.Data["State"] = "open"
 	}
 
+	log.Trace("test3")
+
 	ctx.HTML(200, ISSUES)
 }
 
@@ -530,7 +532,7 @@ func ViewIssue(ctx *middleware.Context) {
 	}
 	ctx.Data["HasSelectedLabel"] = hasSelected
 	ctx.Data["Labels"] = labels
-
+	log.Trace("test4")
 	// Check milestone and assignee.
 	if ctx.Repo.IsAdmin() {
 		RetrieveRepoMilestonesAndAssignees(ctx, repo)
