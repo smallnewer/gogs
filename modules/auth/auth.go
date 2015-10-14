@@ -14,11 +14,11 @@ import (
 	"github.com/macaron-contrib/binding"
 	"github.com/macaron-contrib/session"
 
-	"github.com/gogits/gogs/models"
-	"github.com/gogits/gogs/modules/base"
-	"github.com/gogits/gogs/modules/log"
-	"github.com/gogits/gogs/modules/setting"
-	"github.com/gogits/gogs/modules/uuid"
+	"github.com/smallnewer/gogs/models"
+	"github.com/smallnewer/gogs/modules/base"
+	"github.com/smallnewer/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/setting"
+	"github.com/smallnewer/gogs/modules/uuid"
 )
 
 func IsAPIPath(url string) bool {

@@ -12,7 +12,7 @@ import (
 
 	api "github.com/gogits/go-gogs-client"
 
-	"github.com/gogits/gogs/modules/git"
+	"github.com/smallnewer/gogs/modules/git"
 )
 
 type SlackMeta struct {

@@ -24,11 +24,11 @@ import (
 	"github.com/go-xorm/xorm"
 	"github.com/nfnt/resize"
 
-	"github.com/gogits/gogs/modules/avatar"
-	"github.com/gogits/gogs/modules/base"
-	"github.com/gogits/gogs/modules/git"
-	"github.com/gogits/gogs/modules/log"
-	"github.com/gogits/gogs/modules/setting"
+	"github.com/smallnewer/gogs/modules/avatar"
+	"github.com/smallnewer/gogs/modules/base"
+	"github.com/smallnewer/gogs/modules/git"
+	"github.com/smallnewer/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/setting"
 )
 
 type UserType int

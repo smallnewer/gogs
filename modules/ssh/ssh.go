@@ -15,8 +15,8 @@ import (
 
 	"github.com/Unknwon/com"
 
-	"github.com/gogits/gogs/modules/crypto/ssh"
-	"github.com/gogits/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/crypto/ssh"
+	"github.com/smallnewer/gogs/modules/log"
 )
 
 func handleServerConn(keyId string, chans <-chan ssh.NewChannel) {
@@ -56,7 +56,7 @@ func handleServerConn(keyId string, chans <-chan ssh.NewChannel) {
 				case "exec":
 					os.Setenv("SSH_ORIGINAL_COMMAND", strings.TrimLeft(payload, "'("))
 					log.Info("Payload: %v", strings.TrimLeft(payload, "'("))
-					cmd := exec.Command("/Users/jiahuachen/Applications/Go/src/github.com/gogits/gogs/gogs", "serv", "key-"+keyId)
+					cmd := exec.Command("/Users/jiahuachen/Applications/Go/src/github.com/smallnewer/gogs/gogs", "serv", "key-"+keyId)
 					cmd.Stdout = channel
 					cmd.Stdin = channel
 					cmd.Stderr = channel.Stderr()

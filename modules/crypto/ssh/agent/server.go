@@ -12,7 +12,7 @@ import (
 	"log"
 	"math/big"
 
-	"github.com/gogits/gogs/modules/crypto/ssh"
+	"github.com/smallnewer/gogs/modules/crypto/ssh"
 )
 
 // Server wraps an Agent and uses it to implement the agent side of

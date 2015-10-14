@@ -15,7 +15,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/gogits/gogs/modules/crypto/ssh"
+	"github.com/smallnewer/gogs/modules/crypto/ssh"
 )
 
 // startAgent executes ssh-agent, and returns a Agent interface to it.

@@ -15,11 +15,11 @@ import (
 	"github.com/Unknwon/com"
 	"github.com/codegangsta/cli"
 
-	"github.com/gogits/gogs/models"
-	"github.com/gogits/gogs/modules/httplib"
-	"github.com/gogits/gogs/modules/log"
-	"github.com/gogits/gogs/modules/setting"
-	"github.com/gogits/gogs/modules/uuid"
+	"github.com/smallnewer/gogs/models"
+	"github.com/smallnewer/gogs/modules/httplib"
+	"github.com/smallnewer/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/setting"
+	"github.com/smallnewer/gogs/modules/uuid"
 )
 
 const (

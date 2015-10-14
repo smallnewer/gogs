@@ -12,8 +12,8 @@ import (
 
 	api "github.com/gogits/go-gogs-client"
 
-	"github.com/gogits/gogs/models"
-	"github.com/gogits/gogs/modules/middleware"
+	"github.com/smallnewer/gogs/models"
+	"github.com/smallnewer/gogs/modules/middleware"
 )
 
 // ToApiHook converts webhook to API format.

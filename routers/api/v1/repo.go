@@ -13,11 +13,11 @@ import (
 
 	api "github.com/gogits/go-gogs-client"
 
-	"github.com/gogits/gogs/models"
-	"github.com/gogits/gogs/modules/auth"
-	"github.com/gogits/gogs/modules/log"
-	"github.com/gogits/gogs/modules/middleware"
-	"github.com/gogits/gogs/modules/setting"
+	"github.com/smallnewer/gogs/models"
+	"github.com/smallnewer/gogs/modules/auth"
+	"github.com/smallnewer/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/middleware"
+	"github.com/smallnewer/gogs/modules/setting"
 )
 
 // ToApiRepository converts repository to API format.

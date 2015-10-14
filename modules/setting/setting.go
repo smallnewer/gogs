@@ -20,10 +20,10 @@ import (
 	"github.com/Unknwon/com"
 	"github.com/macaron-contrib/session"
 
-	"github.com/gogits/gogs/modules/bindata"
-	"github.com/gogits/gogs/modules/log"
-	// "github.com/gogits/gogs/modules/ssh"
-	"github.com/gogits/gogs/modules/user"
+	"github.com/smallnewer/gogs/modules/bindata"
+	"github.com/smallnewer/gogs/modules/log"
+	// "github.com/smallnewer/gogs/modules/ssh"
+	"github.com/smallnewer/gogs/modules/user"
 )
 
 type Scheme string

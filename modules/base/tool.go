@@ -23,8 +23,8 @@ import (
 	"github.com/Unknwon/i18n"
 	"github.com/microcosm-cc/bluemonday"
 
-	"github.com/gogits/gogs/modules/avatar"
-	"github.com/gogits/gogs/modules/setting"
+	"github.com/smallnewer/gogs/modules/avatar"
+	"github.com/smallnewer/gogs/modules/setting"
 )
 
 var Sanitizer = bluemonday.UGCPolicy().AllowAttrs("class").Matching(regexp.MustCompile(`[\p{L}\p{N}\s\-_',:\[\]!\./\\\(\)&]*`)).OnElements("code")

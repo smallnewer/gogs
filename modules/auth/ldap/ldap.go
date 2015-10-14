@@ -10,8 +10,8 @@ import (
 	"crypto/tls"
 	"fmt"
 
-	"github.com/gogits/gogs/modules/ldap"
-	"github.com/gogits/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/ldap"
+	"github.com/smallnewer/gogs/modules/log"
 )
 
 // Basic LDAP authentication service

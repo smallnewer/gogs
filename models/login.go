@@ -17,9 +17,9 @@ import (
 	"github.com/go-xorm/core"
 	"github.com/go-xorm/xorm"
 
-	"github.com/gogits/gogs/modules/auth/ldap"
-	"github.com/gogits/gogs/modules/auth/pam"
-	"github.com/gogits/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/auth/ldap"
+	"github.com/smallnewer/gogs/modules/auth/pam"
+	"github.com/smallnewer/gogs/modules/log"
 )
 
 type LoginType int
@@ -228,7 +228,7 @@ func DeleteSource(source *LoginSource) error {
 // Query if name/passwd can login against the LDAP directory pool
 // Create a local user if success
 // Return the same LoginUserPlain semantic
-// FIXME: https://github.com/gogits/gogs/issues/672
+// FIXME: https://github.com/smallnewer/gogs/issues/672
 func LoginUserLDAPSource(u *User, name, passwd string, source *LoginSource, autoRegister bool) (*User, error) {
 	cfg := source.Cfg.(*LDAPConfig)
 	directBind := (source.Type == DLDAP)

@@ -35,8 +35,8 @@ import (
 	"github.com/issue9/identicon"
 	"github.com/nfnt/resize"
 
-	"github.com/gogits/gogs/modules/log"
-	"github.com/gogits/gogs/modules/setting"
+	"github.com/smallnewer/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/setting"
 )
 
 var gravatarSource string

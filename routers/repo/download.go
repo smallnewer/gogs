@@ -8,9 +8,9 @@ import (
 	"io"
 	"path"
 
-	"github.com/gogits/gogs/modules/base"
-	"github.com/gogits/gogs/modules/git"
-	"github.com/gogits/gogs/modules/middleware"
+	"github.com/smallnewer/gogs/modules/base"
+	"github.com/smallnewer/gogs/modules/git"
+	"github.com/smallnewer/gogs/modules/middleware"
 )
 
 func ServeData(ctx *middleware.Context, name string, reader io.Reader) error {
@@ -21,7 +21,7 @@ func ServeData(ctx *middleware.Context, name string, reader io.Reader) error {
 	}
 
 	_, isTextFile := base.IsTextFile(buf)
-	if ! isTextFile {
+	if !isTextFile {
 		_, isImageFile := base.IsImageFile(buf)
 		if !isImageFile {
 			ctx.Resp.Header().Set("Content-Disposition", "attachment; filename="+path.Base(ctx.Repo.TreeName))

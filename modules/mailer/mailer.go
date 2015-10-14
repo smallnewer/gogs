@@ -16,8 +16,8 @@ import (
 
 	"gopkg.in/gomail.v2"
 
-	"github.com/gogits/gogs/modules/log"
-	"github.com/gogits/gogs/modules/setting"
+	"github.com/smallnewer/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/setting"
 )
 
 type Message struct {

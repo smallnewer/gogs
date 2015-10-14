@@ -18,12 +18,12 @@ import (
 	"github.com/macaron-contrib/i18n"
 	"github.com/macaron-contrib/session"
 
-	"github.com/gogits/gogs/models"
-	"github.com/gogits/gogs/modules/auth"
-	"github.com/gogits/gogs/modules/base"
-	"github.com/gogits/gogs/modules/git"
-	"github.com/gogits/gogs/modules/log"
-	"github.com/gogits/gogs/modules/setting"
+	"github.com/smallnewer/gogs/models"
+	"github.com/smallnewer/gogs/modules/auth"
+	"github.com/smallnewer/gogs/modules/base"
+	"github.com/smallnewer/gogs/modules/git"
+	"github.com/smallnewer/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/setting"
 )
 
 type RepoContext struct {

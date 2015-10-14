@@ -10,7 +10,7 @@ import (
 	"github.com/Unknwon/macaron"
 	"github.com/macaron-contrib/binding"
 
-	"github.com/gogits/gogs/modules/auth"
+	"github.com/smallnewer/gogs/modules/auth"
 )
 
 type MarkdownForm struct {

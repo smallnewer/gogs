@@ -17,10 +17,10 @@ import (
 
 	api "github.com/gogits/go-gogs-client"
 
-	"github.com/gogits/gogs/modules/httplib"
-	"github.com/gogits/gogs/modules/log"
-	"github.com/gogits/gogs/modules/setting"
-	"github.com/gogits/gogs/modules/uuid"
+	"github.com/smallnewer/gogs/modules/httplib"
+	"github.com/smallnewer/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/setting"
+	"github.com/smallnewer/gogs/modules/uuid"
 )
 
 type HookContentType int

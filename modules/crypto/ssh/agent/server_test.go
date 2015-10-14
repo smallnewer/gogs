@@ -7,7 +7,7 @@ package agent
 import (
 	"testing"
 
-	"github.com/gogits/gogs/modules/crypto/ssh"
+	"github.com/smallnewer/gogs/modules/crypto/ssh"
 )
 
 func TestServer(t *testing.T) {

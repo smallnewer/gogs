@@ -11,11 +11,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/gogits/gogs/models"
-	"github.com/gogits/gogs/modules/base"
-	"github.com/gogits/gogs/modules/git"
-	"github.com/gogits/gogs/modules/log"
-	"github.com/gogits/gogs/modules/middleware"
+	"github.com/smallnewer/gogs/models"
+	"github.com/smallnewer/gogs/modules/base"
+	"github.com/smallnewer/gogs/modules/git"
+	"github.com/smallnewer/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/middleware"
 )
 
 const (

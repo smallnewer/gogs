@@ -11,11 +11,11 @@ import (
 	"github.com/Unknwon/com"
 	"github.com/Unknwon/paginater"
 
-	"github.com/gogits/gogs/models"
-	"github.com/gogits/gogs/modules/base"
-	"github.com/gogits/gogs/modules/git"
-	"github.com/gogits/gogs/modules/middleware"
-	"github.com/gogits/gogs/modules/setting"
+	"github.com/smallnewer/gogs/models"
+	"github.com/smallnewer/gogs/modules/base"
+	"github.com/smallnewer/gogs/modules/git"
+	"github.com/smallnewer/gogs/modules/middleware"
+	"github.com/smallnewer/gogs/modules/setting"
 )
 
 const (

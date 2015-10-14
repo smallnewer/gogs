@@ -7,9 +7,9 @@ package middleware
 import (
 	"github.com/Unknwon/macaron"
 
-	"github.com/gogits/gogs/models"
-	"github.com/gogits/gogs/modules/log"
-	"github.com/gogits/gogs/modules/setting"
+	"github.com/smallnewer/gogs/models"
+	"github.com/smallnewer/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/setting"
 )
 
 func OrgAssignment(redirect bool, args ...bool) macaron.Handler {

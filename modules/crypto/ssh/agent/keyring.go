@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/gogits/gogs/modules/crypto/ssh"
+	"github.com/smallnewer/gogs/modules/crypto/ssh"
 )
 
 type privKey struct {

@@ -5,10 +5,10 @@
 package v1
 
 import (
-	"github.com/gogits/gogs/models"
-	"github.com/gogits/gogs/modules/git"
-	"github.com/gogits/gogs/modules/middleware"
-	"github.com/gogits/gogs/routers/repo"
+	"github.com/smallnewer/gogs/models"
+	"github.com/smallnewer/gogs/modules/git"
+	"github.com/smallnewer/gogs/modules/middleware"
+	"github.com/smallnewer/gogs/routers/repo"
 )
 
 func GetRepoRawFile(ctx *middleware.Context) {

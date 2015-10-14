@@ -7,8 +7,8 @@ package models
 import (
 	"time"
 
-	"github.com/gogits/gogs/modules/base"
-	"github.com/gogits/gogs/modules/uuid"
+	"github.com/smallnewer/gogs/modules/base"
+	"github.com/smallnewer/gogs/modules/uuid"
 )
 
 // AccessToken represents a personal access token.

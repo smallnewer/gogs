@@ -12,8 +12,8 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/gogits/gogs/modules/crypto/ssh"
-	"github.com/gogits/gogs/modules/crypto/ssh/terminal"
+	"github.com/smallnewer/gogs/modules/crypto/ssh"
+	"github.com/smallnewer/gogs/modules/crypto/ssh/terminal"
 )
 
 func ExampleNewServerConn() {

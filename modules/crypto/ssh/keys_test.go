@@ -17,7 +17,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gogits/gogs/modules/crypto/ssh/testdata"
+	"github.com/smallnewer/gogs/modules/crypto/ssh/testdata"
 )
 
 func rawKey(pub PublicKey) interface{} {

@@ -13,10 +13,10 @@ import (
 	"github.com/mcuadros/go-version"
 	"github.com/mssola/user_agent"
 
-	"github.com/gogits/gogs/models"
-	"github.com/gogits/gogs/modules/git"
-	"github.com/gogits/gogs/modules/log"
-	"github.com/gogits/gogs/modules/setting"
+	"github.com/smallnewer/gogs/models"
+	"github.com/smallnewer/gogs/modules/git"
+	"github.com/smallnewer/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/setting"
 )
 
 const (

@@ -7,7 +7,7 @@ package ldap
 import (
 	"fmt"
 
-	"github.com/gogits/gogs/modules/asn1-ber"
+	"github.com/smallnewer/gogs/modules/asn1-ber"
 )
 
 const (

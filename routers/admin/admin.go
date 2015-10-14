@@ -13,12 +13,12 @@ import (
 	"github.com/Unknwon/com"
 	"github.com/Unknwon/macaron"
 
-	"github.com/gogits/gogs/models"
-	"github.com/gogits/gogs/models/cron"
-	"github.com/gogits/gogs/modules/base"
-	"github.com/gogits/gogs/modules/middleware"
-	"github.com/gogits/gogs/modules/process"
-	"github.com/gogits/gogs/modules/setting"
+	"github.com/smallnewer/gogs/models"
+	"github.com/smallnewer/gogs/models/cron"
+	"github.com/smallnewer/gogs/modules/base"
+	"github.com/smallnewer/gogs/modules/middleware"
+	"github.com/smallnewer/gogs/modules/process"
+	"github.com/smallnewer/gogs/modules/setting"
 )
 
 const (

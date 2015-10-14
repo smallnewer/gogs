@@ -5,8 +5,8 @@
 package repo
 
 import (
-	"github.com/gogits/gogs/modules/base"
-	"github.com/gogits/gogs/modules/middleware"
+	"github.com/smallnewer/gogs/modules/base"
+	"github.com/smallnewer/gogs/modules/middleware"
 )
 
 const (

@@ -84,7 +84,7 @@ There are 5 ways to install Gogs:
 - [Install from binary](http://gogs.io/docs/installation/install_from_binary.html)
 - [Install from source](http://gogs.io/docs/installation/install_from_source.html)
 - [Install from packages](http://gogs.io/docs/installation/install_from_packages.html)
-- [Ship with Docker](https://github.com/gogits/gogs/tree/master/docker)
+- [Ship with Docker](https://github.com/smallnewer/gogs/tree/master/docker)
 - [Install with Vagrant](https://github.com/geerlingguy/ansible-vagrant-examples/tree/master/gogs)
 
 ### Tutorials
@@ -117,9 +117,9 @@ There are 5 ways to install Gogs:
 ## Contributors
 
 - Ex-team members [@lunny](https://github.com/lunny) and [@fuxiaohei](https://github.com/fuxiaohei).
-- See [contributors page](https://github.com/gogits/gogs/graphs/contributors) for full list of contributors.
+- See [contributors page](https://github.com/smallnewer/gogs/graphs/contributors) for full list of contributors.
 - See [TRANSLATORS](conf/locale/TRANSLATORS) for public list of translators.
 
 ## License
 
-This project is under the MIT License. See the [LICENSE](https://github.com/gogits/gogs/blob/master/LICENSE) file for the full license text.
+This project is under the MIT License. See the [LICENSE](https://github.com/smallnewer/gogs/blob/master/LICENSE) file for the full license text.

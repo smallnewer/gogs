@@ -12,7 +12,7 @@ import (
 	"crypto/rand"
 	"fmt"
 
-	"github.com/gogits/gogs/modules/crypto/ssh/testdata"
+	"github.com/smallnewer/gogs/modules/crypto/ssh/testdata"
 )
 
 var (

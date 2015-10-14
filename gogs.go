@@ -13,8 +13,8 @@ import (
 
 	"github.com/codegangsta/cli"
 
-	"github.com/gogits/gogs/cmd"
-	"github.com/gogits/gogs/modules/setting"
+	"github.com/smallnewer/gogs/cmd"
+	"github.com/smallnewer/gogs/modules/setting"
 )
 
 const APP_VER = "0.6.16.1008 Beta"

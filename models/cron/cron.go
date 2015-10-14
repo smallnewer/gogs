@@ -7,10 +7,10 @@ package cron
 import (
 	"time"
 
-	"github.com/gogits/gogs/models"
-	"github.com/gogits/gogs/modules/cron"
-	"github.com/gogits/gogs/modules/log"
-	"github.com/gogits/gogs/modules/setting"
+	"github.com/smallnewer/gogs/models"
+	"github.com/smallnewer/gogs/modules/cron"
+	"github.com/smallnewer/gogs/modules/log"
+	"github.com/smallnewer/gogs/modules/setting"
 )
 
 var c = cron.New()

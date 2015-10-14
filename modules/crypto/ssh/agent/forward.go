@@ -10,7 +10,7 @@ import (
 	"net"
 	"sync"
 
-	"github.com/gogits/gogs/modules/crypto/ssh"
+	"github.com/smallnewer/gogs/modules/crypto/ssh"
 )
 
 // RequestAgentForwarding sets up agent forwarding for the session.

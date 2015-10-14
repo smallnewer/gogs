@@ -17,7 +17,7 @@ import (
 	"golang.org/x/text/transform"
 
 	"github.com/gogits/chardet"
-	"github.com/gogits/gogs/modules/setting"
+	"github.com/smallnewer/gogs/modules/setting"
 )
 
 func Safe(raw string) template.HTML {
