@@ -238,9 +238,9 @@ func RetrieveRepoMilestonesAndAssignees(ctx *middleware.Context, repo *models.Re
 }
 
 func RetrieveRepoMetas(ctx *middleware.Context, repo *models.Repository) []*models.Label {
-	if !ctx.Repo.IsAdmin() {
-		return nil
-	}
+	// if !ctx.Repo.IsAdmin() {
+	// 	return nil
+	// }
 
 	labels, err := models.GetLabelsByRepoID(repo.ID)
 	if err != nil {
