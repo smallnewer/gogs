@@ -571,6 +571,7 @@ func runWeb(ctx *cli.Context) {
 	var err error
 	listenAddr := fmt.Sprintf("%s:%s", setting.HttpAddr, setting.HttpPort)
 	log.Info("Listen : %v://%s%s", setting.Protocol, listenAddr, setting.AppSubUrl)
+	log.Trace("test5")
 	switch setting.Protocol {
 	case setting.HTTP:
 		err = http.ListenAndServe(listenAddr, m)
