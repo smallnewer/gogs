@@ -534,12 +534,12 @@ func ViewIssue(ctx *middleware.Context) {
 	ctx.Data["Labels"] = labels
 	log.Trace("test4")
 	// Check milestone and assignee.
-	if ctx.Repo.IsAdmin() {
-		RetrieveRepoMilestonesAndAssignees(ctx, repo)
-		if ctx.Written() {
-			return
-		}
+	// if ctx.Repo.IsAdmin() {
+	RetrieveRepoMilestonesAndAssignees(ctx, repo)
+	if ctx.Written() {
+		return
 	}
+	// }
 
 	if ctx.IsSigned {
 		// Update issue-user.
