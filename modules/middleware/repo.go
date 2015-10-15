@@ -361,9 +361,9 @@ func RepoAssignment(redirect bool, args ...bool) macaron.Handler {
 			ctx.Data["BranchName"] = ""
 			if displayBare {
 				if !ctx.Repo.IsAdmin() {
-					// ctx.Flash.Info(ctx.Tr("repo.repo_is_empty"), true)
+					ctx.Flash.Info(ctx.Tr("repo.repo_is_empty"), true)
 				}
-				ctx.HTML(200, "repo/home")
+				ctx.HTML(200, "repo/bare")
 			}
 			return
 		}
