@@ -389,13 +389,12 @@ func NewIssuePost(ctx *middleware.Context, form auth.CreateIssueForm) {
 		// 	return
 		// }
 
-		var tos
-		tos = append(tos, ctx.User.LowerName)
+		// tos = append(tos, ctx.User.LowerName)
 		newTos := make([]string, 0, len(mentions))
 		for _, m := range mentions {
-			if com.IsSliceContainsStr(tos, m) {
-				continue
-			}
+			// if com.IsSliceContainsStr(tos, m) {
+			// 	continue
+			// }
 
 			newTos = append(newTos, m)
 		}
@@ -813,12 +812,12 @@ func NewComment(ctx *middleware.Context, form auth.CreateCommentForm) {
 		// 	return
 		// }
 
-		tos := append(tos, ctx.User.LowerName)
+		// tos := append(tos, ctx.User.LowerName)
 		newTos := make([]string, 0, len(mentions))
 		for _, m := range mentions {
-			if com.IsSliceContainsStr(tos, m) {
-				continue
-			}
+			// if com.IsSliceContainsStr(tos, m) {
+			// 	continue
+			// }
 
 			newTos = append(newTos, m)
 		}
