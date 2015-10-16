@@ -383,13 +383,13 @@ func NewIssuePost(ctx *middleware.Context, form auth.CreateIssueForm) {
 
 	// Mail watchers and mentions.
 	if setting.Service.EnableNotifyMail {
-		tos, err := mailer.SendIssueNotifyMail(ctx.User, ctx.Repo.Owner, repo, issue)
-		if err != nil {
-			ctx.Handle(500, "SendIssueNotifyMail", err)
-			return
-		}
+		// tos, err := mailer.SendIssueNotifyMail(ctx.User, ctx.Repo.Owner, repo, issue)
+		// if err != nil {
+		// 	ctx.Handle(500, "SendIssueNotifyMail", err)
+		// 	return
+		// }
 
-		tos = append(tos, ctx.User.LowerName)
+		tos := append(tos, ctx.User.LowerName)
 		newTos := make([]string, 0, len(mentions))
 		for _, m := range mentions {
 			if com.IsSliceContainsStr(tos, m) {
@@ -806,13 +806,13 @@ func NewComment(ctx *middleware.Context, form auth.CreateCommentForm) {
 	// Mail watchers and mentions.
 	if setting.Service.EnableNotifyMail {
 		issue.Content = form.Content
-		tos, err := mailer.SendIssueNotifyMail(ctx.User, ctx.Repo.Owner, ctx.Repo.Repository, issue)
-		if err != nil {
-			ctx.Handle(500, "SendIssueNotifyMail", err)
-			return
-		}
+		// tos, err := mailer.SendIssueNotifyMail(ctx.User, ctx.Repo.Owner, ctx.Repo.Repository, issue)
+		// if err != nil {
+		// 	ctx.Handle(500, "SendIssueNotifyMail", err)
+		// 	return
+		// }
 
-		tos = append(tos, ctx.User.LowerName)
+		tos := append(tos, ctx.User.LowerName)
 		newTos := make([]string, 0, len(mentions))
 		for _, m := range mentions {
 			if com.IsSliceContainsStr(tos, m) {
@@ -821,6 +821,7 @@ func NewComment(ctx *middleware.Context, form auth.CreateCommentForm) {
 
 			newTos = append(newTos, m)
 		}
+
 		if err = mailer.SendIssueMentionMail(ctx.Render, ctx.User, ctx.Repo.Owner,
 			ctx.Repo.Repository, issue, models.GetUserEmailsByNames(newTos)); err != nil {
 			ctx.Handle(500, "SendIssueMentionMail", err)
