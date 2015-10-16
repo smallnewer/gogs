@@ -746,6 +746,7 @@ func GetUserByID(id int64) (*User, error) {
 
 // GetAssigneeByID returns the user with write access of repository by given ID.
 func GetAssigneeByID(repo *Repository, userID int64) (*User, error) {
+	fmt.Printf("权限啊权限2%d\n", ACCESS_MODE_WRITE)
 	has, err := HasAccess(&User{Id: userID}, repo, ACCESS_MODE_WRITE)
 	if err != nil {
 		return nil, err

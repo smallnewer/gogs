@@ -45,6 +45,7 @@ func accessLevel(e Engine, u *User, repo *Repository) (AccessMode, error) {
 		if has, err := e.Get(a); !has || err != nil {
 			return mode, err
 		}
+		fmt.Printf("权限啊权限1%d\n", a.Mode)
 		return a.Mode, nil
 	}
 
