@@ -287,19 +287,23 @@ func (i *Issue) ChangeStatus(doer *User, isClosed bool) (err error) {
 
 // It's caller's responsibility to create action.
 func newIssue(e *xorm.Session, repo *Repository, issue *Issue, labelIDs []int64, uuids []string, isPull bool) (err error) {
+	fmt.Printf("id11: %d\n", 1)
 	if _, err = e.Insert(issue); err != nil {
 		return err
 	}
-
+	fmt.Printf("id11: %d\n", 2)
 	if isPull {
+		fmt.Printf("id11: %d\n", 3)
 		_, err = e.Exec("UPDATE `repository` SET num_pulls=num_pulls+1 WHERE id=?", issue.RepoID)
 	} else {
+		fmt.Printf("id11: %d\n", 4)
 		_, err = e.Exec("UPDATE `repository` SET num_issues=num_issues+1 WHERE id=?", issue.RepoID)
 	}
+
 	if err != nil {
 		return err
 	}
-
+	fmt.Printf("id11: %d\n", 5)
 	var label *Label
 	for _, id := range labelIDs {
 		if id == 0 {
