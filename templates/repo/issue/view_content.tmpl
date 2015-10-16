@@ -302,7 +302,7 @@
 				<span class="no-select item {{if .Issue.Assignee}}hide{{end}}">{{.i18n.Tr "repo.issues.new.no_assignee"}}</span>
 				<div class="selected">
 					{{if .Issue.Assignee}}
-					<a class="item" href="{{$.RepoLink}}/issues?assignee={{.Issue.Assignee.Id}}"><img class="ui avatar image" src="{{.Issue.Assignee.AvatarLink}}"> {{.Issue.Assignee.Name}}</a>
+					<a class="item" href="{{$.RepoLink}}/issues?assignee={{.Issue.Assignee.Id}}"><img class="ui avatar image" src="{{.Issue.Assignee.AvatarLink}}"> {{.Issue.Assignee.FullName}}</a>
 					{{end}}
 				</div>
 			</div>

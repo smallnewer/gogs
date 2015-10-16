@@ -307,6 +307,7 @@ func newIssue(e *xorm.Session, repo *Repository, issue *Issue, labelIDs []int64,
 		}
 
 		label, err = getLabelByID(e, id)
+		fmt.Printf("id1: %d\n", id)
 		if err != nil {
 			return err
 		}
@@ -1168,6 +1169,7 @@ func getLabelByID(e Engine, id int64) (*Label, error) {
 	if err != nil {
 		return nil, err
 	} else if !has {
+		fmt.Printf("id2: %d\n", l.ID)
 		return nil, ErrLabelNotExist{l.ID}
 	}
 	return l, nil
