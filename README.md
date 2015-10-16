@@ -1,6 +1,15 @@
 Gogs - Go Git Service [![Build Status](https://travis-ci.org/gogits/gogs.svg?branch=master)](https://travis-ci.org/gogits/gogs)
 =====================
 
+- [ ] 新建要有权限改指派人
+- [ ] 指派显示中文名字
+- [ ] @最好也显示中文名字
+- [ ] 有@的评论，给被@的人发邮件通知
+- [ ] 关联bug
+
+
+
+
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gogits/gogs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![](public/img/gogs-large-resize.png)
