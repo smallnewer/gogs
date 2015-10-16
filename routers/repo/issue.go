@@ -398,7 +398,7 @@ func NewIssuePost(ctx *middleware.Context, form auth.CreateIssueForm) {
 
 			newTos = append(newTos, m)
 		}
-		if err = mailer.SendIssueMentionMail(ctx.Render, ctx.User, ctx.Repo.Owner,
+		if err := mailer.SendIssueMentionMail(ctx.Render, ctx.User, ctx.Repo.Owner,
 			repo, issue, models.GetUserEmailsByNames(newTos)); err != nil {
 			ctx.Handle(500, "SendIssueMentionMail", err)
 			return
@@ -822,7 +822,7 @@ func NewComment(ctx *middleware.Context, form auth.CreateCommentForm) {
 			newTos = append(newTos, m)
 		}
 
-		if err = mailer.SendIssueMentionMail(ctx.Render, ctx.User, ctx.Repo.Owner,
+		if err := mailer.SendIssueMentionMail(ctx.Render, ctx.User, ctx.Repo.Owner,
 			ctx.Repo.Repository, issue, models.GetUserEmailsByNames(newTos)); err != nil {
 			ctx.Handle(500, "SendIssueMentionMail", err)
 			return
