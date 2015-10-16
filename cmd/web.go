@@ -474,13 +474,16 @@ func runWeb(ctx *cli.Context) {
 			m.Group("/:index", func() {
 				// m.Post("/label", repo.UpdateIssueLabel)
 				m.Post("/milestone", repo.UpdateIssueMilestone)
-				m.Post("/assignee", repo.UpdateIssueAssignee)
+				// m.Post("/assignee", repo.UpdateIssueAssignee)
 			}, reqRepoAdmin)
 
 			m.Group("/:index", func() {
 				m.Post("/title", repo.UpdateIssueTitle)
 				m.Post("/content", repo.UpdateIssueContent)
+
 				m.Post("/label", repo.UpdateIssueLabel)
+				// m.Post("/milestone", repo.UpdateIssueMilestone)
+				m.Post("/assignee", repo.UpdateIssueAssignee)
 			})
 		})
 		m.Post("/comments/:id", repo.UpdateCommentContent)
