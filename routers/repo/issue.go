@@ -389,7 +389,8 @@ func NewIssuePost(ctx *middleware.Context, form auth.CreateIssueForm) {
 		// 	return
 		// }
 
-		tos := append(tos, ctx.User.LowerName)
+		var tos
+		tos = append(tos, ctx.User.LowerName)
 		newTos := make([]string, 0, len(mentions))
 		for _, m := range mentions {
 			if com.IsSliceContainsStr(tos, m) {
