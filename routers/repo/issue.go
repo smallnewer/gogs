@@ -286,9 +286,9 @@ func ValidateRepoMetas(ctx *middleware.Context, form auth.CreateIssueForm) ([]in
 		return nil, 0, 0
 	}
 
-	if !ctx.Repo.IsAdmin() {
-		return nil, 0, 0
-	}
+	// if !ctx.Repo.IsAdmin() {
+	// 	return nil, 0, 0
+	// }
 
 	// Check labels.
 	labelIDs := base.StringsToInt64s(strings.Split(form.LabelIDs, ","))
