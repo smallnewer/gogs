@@ -291,7 +291,7 @@
 					<strong>{{.i18n.Tr "repo.issues.new.assignee"}}</strong>
 					<span class="octicon octicon-gear"></span>
 				</span>
-        <div class="menu" data-action="update" data-update-url="{{$.RepoLink}}/issues/{{$.Issue.Index}}/assignee">
+        <div class="menu" data-action="update" data-update-url="{{$.RepoLink}}/issues/{{$.Issue.Index}}/assignee" style="overflow:auto;">
         	<div class="no-select item">{{.i18n.Tr "repo.issues.new.clear_assignee"}}</div>
         	{{range .Assignees}}
         	<div class="item" data-id="{{.Id}}" data-href="{{$.RepoLink}}/issues?assignee={{.Id}}" data-avatar="{{.AvatarLink}}"><img src="{{.AvatarLink}}"> {{.FullName}}</div>
