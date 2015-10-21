@@ -8,7 +8,7 @@ Gogs - Go Git Service [![Build Status](https://travis-ci.org/gogits/gogs.svg?bra
 - [ ] 关联bug
 - [ ] 评论时间显示具体日期
 - [ ] 增加测试链接页面
-- [ ] 
+- [ ] 有评论的时候，应该给创建者和被指派者发送邮件
 
 
 
