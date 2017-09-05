@@ -27,7 +27,7 @@
 	<script src="{{AppSubUrl}}/js/gogs.js?v={{AppVer}}"></script>
 	<script>
 		;(function () {
-			    
+    
 
 			function getOpenUrl (page) {
 			    return location.origin + location.pathname + 
@@ -117,10 +117,15 @@
 			        $('a.item:contains("探索")').after($('<a class="item" >搜索</a>')
 			                .click(function () {
 			                    var text = prompt('请输入标题');
-			                    text && searchTitle(text.toUpperCase())
+			                    text && searchTitle(text.toLowerCase())
 			                }));
 			    };
-			})
+			});
+
+			jQuery.expr[':'].contains = function(a, i, m) {
+			  return jQuery(a).text().toUpperCase()    
+			      .indexOf(m[3].toUpperCase()) >= 0;    
+			};   
 
 			})();
 	</script>
