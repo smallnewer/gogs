@@ -82,7 +82,9 @@
 			        wrap.css("position", "absolute")
 			            .css("background", "white")
 			            .css("border", "1px solid gray")
-			            .css("width", "400px")
+			            .css("min-width", "400px")
+			            .css("max-width", "960px")
+			            .css("width", "80%")
 			            .css("height", "400px")
 			            .css("left", "50%")
 			            .css("top", "50%")
@@ -98,6 +100,7 @@
 			    };
 			    wrapspan.css({"display": "block", "text-align": "center", "line-height": "28px"}).html("查询中").show();
 			    wrap.fadeIn(500).prev().fadeIn(500);
+			    wrapul.empty();
 			}
 			function closeWrap () {
 			    wrap && wrap.fadeOut(500).prev().fadeOut(500);
@@ -114,7 +117,7 @@
 			        $('a.item:contains("探索")').after($('<a class="item" >搜索</a>')
 			                .click(function () {
 			                    var text = prompt('请输入标题');
-			                    text && searchTitle(text)
+			                    text && searchTitle(text.toUpperCase())
 			                }));
 			    };
 			})
