@@ -25,7 +25,102 @@
 	<!-- JavaScript -->
 	<script src="{{AppSubUrl}}/js/semantic-2.1.3.min.js"></script>
 	<script src="{{AppSubUrl}}/js/gogs.js?v={{AppVer}}"></script>
+	<script>
+		;(function () {
+			    
 
+			function getOpenUrl (page) {
+			    return location.origin + location.pathname + 
+			        "?type=all&state=open&labels=0&milestone=0&assignee=0&page=" + page;
+			}
+
+			function getListHtml (page) {
+			    return jQuery.get(getOpenUrl(page)).then(function(response) {  
+			        return response;  
+			    });  
+			}
+
+			function parseHtml (page, title) {
+			    return getListHtml(page).then(function (text) {
+			        return $(jQuery.parseHTML(text)).find('.issue.list .item a.title:contains("' + title + '")').parent()
+			    })
+			}
+
+			function searchTitle (title) {
+			    initWrap();
+			    var len = getIssueCount();
+			    console.log("搜索共", len, "页")
+			    var arr = []
+			    var ok = 0
+			    for (var i = 1; i <= len; i++) {
+			        arr.push(parseHtml(i, title).then(function ($dom) {
+			            wrapul.append($dom.clone())
+			            updateProgress(++ok, len)
+			        }))
+			    };
+			    Promise.all(arr).then(function () {
+			        endSearch();
+			    })
+			}
+			function getIssueCount () {
+			    var open = parseInt($('.button:contains("开启中")').text().trim().split(' ')[0])
+			    var close = parseInt($('.button:contains("已关闭")').text().trim().split(' ')[0])
+			    var num = open + close;
+			    if (isNaN(num)) {
+			        return 100;
+			    };
+			    return Math.ceil(num / 10)
+			}
+
+			var wrap = null;
+			var wrapul = null;
+			var wrapspan = null;
+			function initWrap () {
+			    if (!wrap) {
+			        wrap = $('<div><ul class="issue list"></ul><span><span></div>')
+			                  .appendTo('body');
+			        wrap.css("position", "absolute")
+			            .css("background", "white")
+			            .css("border", "1px solid gray")
+			            .css("width", "400px")
+			            .css("height", "400px")
+			            .css("left", "50%")
+			            .css("top", "50%")
+			            .css("transform", "translate(-50%, -50%")
+			        wrap.find("button").on('click', closeWrap)
+			        wrapul = wrap.find("ul");
+			        wrapul.css("height", "77%");
+			        wrapul.css("padding", "15px");
+			        wrapul.css("overflow", "auto")
+			        wrapspan = wrap.find("span");
+			        wrap.before($('<div style="position:absolute;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,0.5)"></div>')
+			            .click(closeWrap))
+			    };
+			    wrapspan.css({"display": "block", "text-align": "center", "line-height": "28px"}).html("查询中").show();
+			    wrap.fadeIn(500).prev().fadeIn(500);
+			}
+			function closeWrap () {
+			    wrap && wrap.fadeOut(500).prev().fadeOut(500);
+			}
+			function endSearch () {
+			    wrapspan.html("查询完毕, " + wrapul.children().length + "条结果")
+			}
+			function updateProgress (a, b) {
+			    wrapspan.html("查询中" + a + "/" + b + "页")
+			}
+
+			$(function () {
+			    if (location.href.indexOf('/issues') >= 0 && getIssueCount() > 0) {
+			        $('a.item:contains("探索")').after($('<a class="item" >搜索</a>')
+			                .click(function () {
+			                    var text = prompt('请输入标题');
+			                    text && searchTitle(text)
+			                }));
+			    };
+			})
+
+			})();
+	</script>
 	<title>{{if .Title}}{{.Title}} - {{end}}{{AppName}}</title>
 </head>
 <body>
